@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="PaddysCafe.xsl"?>
-<cafemenu>
+<?xml-stylesheet type="text/xsl" href="LikeanAngele.xsl"?>
+<treatments>
     <section name="Specialized Packages">
         <entree >
-            <item>Party Package - Blowdry & Manicure </item>
+            <item>Party Package - Blowdry &amp; Manicure </item>
             <price>35.00</price>
         </entree>
         <entree>
-            <item>Bridal Package - Hair up, Manicure & wax </item>
+            <item>Bridal Package - Hair up, Manicure &amp; wax </item>
             <price>60.00</price>
         </entree>
         <entree>
@@ -25,11 +25,11 @@
             <price>15.00</price>
         </entree>
         <entree >
-            <item>shellac & Manicure</item>
+            <item>shellac &amp; Manicure</item>
             <price>30.00</price>
         </entree>
         <entree >
-            <item>Shellac & Pedicure </item>
+            <item>Shellac &amp; Pedicure </item>
             <price>30.00</price>
         </entree>
         <entree>
@@ -57,7 +57,7 @@
     </section>
     <section name="Make- Up">
         <entree>
-            <item>Cleanse, Make-up & Lashes</item>
+            <item>Cleanse, Make-up &amp; Lashes</item>
             <price>45.00</price>
         </entree>
         <entree>
@@ -69,4 +69,4 @@
             <price>50.00</price>
         </entree>
     </section>
-</cafemenu>
+</treatments>
