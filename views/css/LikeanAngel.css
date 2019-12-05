@@ -21,7 +21,7 @@ body {
 }
 table, th, td {
      border-collapse: collapse;
-     border: 1px solid black;
+     border: 1px solid #ffb3da;
      text-align: center;
 }
  table {
