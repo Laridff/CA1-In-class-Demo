@@ -5,7 +5,10 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background-color: #FFE4E1;}
+  background-color: #FFE4E1;
+  background-image: url(http://getwallpapers.com/wallpaper/full/4/3/b/700357-download-free-flower-background-wallpaper-2560x1600-iphone.jpg);
+  background-size: cover;
+  }
 }
 .footer {
   position: absolute;
