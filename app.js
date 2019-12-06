@@ -61,7 +61,7 @@ router.post('/post/json', function(req, res) {
     xmlFileToJs('LikeanAngel.xml', function(err, result) {
       if (err) throw (err);
       //This is where you pass on information from the form inside index.html in a form of JSON and navigate through our JSON (XML) file to create a new entree object
-      result.bookservice.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price}); //If your XML elements are differet, this is where you have to change to your own element names
+      result.treatments.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price}); //If your XML elements are differet, this is where you have to change to your own element names
       //Converting back to our original XML file from JSON
       jsToXmlFile('LikeanAngel.xml', result, function(err) {
         if (err) console.log(err);
@@ -85,8 +85,8 @@ router.post('/post/delete', function(req, res) {
     // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
     xmlFileToJs('LikeanAngels.xml', function(err, result) {
       if (err) throw (err);
-      //This is where we delete the object based on the position of the section and position of the entree, as being passed on from index.html
-      delete result.cafemenu.section[obj.section].entree[obj.entree];
+      //This is whecafemenure we delete the object based on the position of the section and position of the entree, as being passed on from index.html
+      delete result.treatments.section[obj.section].entree[obj.entree];
       //This is where we convert from JSON and write back our XML file
       jsToXmlFile('LikeanAngel.xml', result, function(err) {
         if (err) console.log(err);
