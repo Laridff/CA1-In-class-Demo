@@ -13,7 +13,10 @@
       <item>Relaxation Package</item>
       <price>30.00</price>
     </entree>
-    
+    <entree>
+      <item/>
+      <price/>
+    </entree>
   </section>
   <section name="Nail Care">
     <entree>
