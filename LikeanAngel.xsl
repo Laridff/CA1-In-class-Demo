@@ -21,7 +21,6 @@
                             </tr>
                             <xsl:for-each select="entree">
                                 <tr id="{position()}">
-                                <tr>
                                     <td align="center">
                                         <input name="item0" type="checkbox" />
                                     </td>
