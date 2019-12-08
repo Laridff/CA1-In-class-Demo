@@ -27,6 +27,7 @@ function jsToXmlFile(filename, obj, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
   var builder = new xml2js.Builder();
   var xml = builder.buildObject(obj);
+  fs.unlinkSync(filepath);
   fs.writeFile(filepath, xml, cb);
 }
 
@@ -85,7 +86,7 @@ router.post('/post/delete', function(req, res) {
     // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
     xmlFileToJs('LikeanAngel.xml', function(err, result) {
       if (err) throw (err);
-      //This is whecafemenure we delete the object based on the position of the section and position of the entree, as being passed on from index.html
+      //This is where treatments  delete the object based on the position of the section and position of the entree, as being passed on from index.html
       delete result.treatments.section[obj.section].entree[obj.entree];
       //This is where we convert from JSON and write back our XML file
       jsToXmlFile('LikeanAngel.xml', result, function(err) {
