@@ -1,5 +1,5 @@
 const db = require("../models");
-const LikeanAngel = db.likeanangel;
+const Likeanangel = db.likeanangel;
 
 // Create and Save a new treatments
 exports.create = (req, res) => {
@@ -10,7 +10,7 @@ exports.create = (req, res) => {
     }
 
     //create a new treatments
-    const likeanangel = new likeanangel({
+    const likeanangel = new Likeanangel({
         section: req.body.section,
         item: req.body.item,
         price: req.body.price,
@@ -36,7 +36,7 @@ exports.findAll = (req, res) => {
     const item = req.query.title;
     let condition = item ? { item: { $regex: new RegExp(item), $options: "i" } } : {};
 
-    likeanangel.find(condition)
+    Likeanangel.find(condition)
         .then(data => {
             res.send(data);
         })
@@ -52,7 +52,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    likeanangel.findById(id)
+    Likeanangel.findById(id)
         .then(data => {
             if (!data)
                 res.status(404).send({ message: "Not found treatment with id " + id });
@@ -75,7 +75,7 @@ exports.update = (req, res) => {
         });
     }
 
-    likeanangel.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    Likeanangel.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
        .then(data => {
             if (!data) {
                 res.status(404).send({
@@ -95,7 +95,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id;
 
-    likeanangel.findByIdAndRemove(id)
+    Likeanangel.findByIdAndRemove(id)
         .then(data => {
         if (!data) {
             res.status(404).send({
@@ -117,7 +117,7 @@ exports.delete = (req, res) => {
 
 // Delete all treatment from the database.
 exports.deleteAll = (req, res) => {
-    likeanangel.deleteMany({})
+    Likeanangel.deleteMany({})
     .then(data => {
     res.send({
         message: `${data.deletedCount} treatments were successfully deleted!`
