@@ -11,10 +11,8 @@ exports.create = (req, res) => {
 
     //create a new treatments
     const likeanangel = new likeanangel({
-        theme: req.body.theme,
-        author: req.body.author,
-        title: req.body.title,
-        genre: req.body.genre,
+        section: req.body.section,
+        item: req.body.item,
         price: req.body.price,
         published: req.body.published ? req.body.published : false
     });
