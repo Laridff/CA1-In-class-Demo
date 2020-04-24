@@ -20,7 +20,7 @@ module.exports = app => {
     router.delete("/:id", likeanangel.delete);
 
     //delete all treatment in the list
-    router.delete("/", likeangel.deleteAll);
+    router.delete("/", likeanangel.deleteAll);
 
     app.use('/api/likeanangel', router);
 }
