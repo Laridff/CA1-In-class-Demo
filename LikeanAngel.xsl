@@ -24,10 +24,10 @@
                                     <td align="center">
                                         <input name="item0" type="checkbox" />
                                     </td>
-                                    <td>
+                                    <td id="itemKey">
                                         <xsl:value-of select="item" />
                                     </td>
-                                    <td align="right">
+                                    <td align="right" id="price">
                                         <xsl:value-of select="price" />
                                     </td>
                                 </tr>
