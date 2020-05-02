@@ -8,7 +8,7 @@ const app = express(); // setting the routing to be handled by Express
 let server = http.createServer(app); //This is where our server gets created
 
 let corsOptions = {
-    origin: "http://localhost:8081"
+    origin: "*"
 };
 
 const db = require("./app/models");
