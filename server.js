@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // simple route
 app.get("/", (req, res) => {
   //res.json({ message: "Welcome to Like An Angel application." });
-res.redirect('./app/view/index.html');
+res.sendfile('index.html', { root: __dirname + "./app/view" } );
 });
 
 require("./app/routes/likeanangel.routes.js")(app);
