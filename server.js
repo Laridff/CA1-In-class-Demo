@@ -32,11 +32,11 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static('./app/view/', {index: 'index.html'}))
 // simple route
 app.get("/", (req, res) => {
-  //res.json({ message: "Welcome to Like An Angel application." });
-res.sendfile('index.html', { root: __dirname + "./app/view" } );
+  res.json({ message: "Welcome to Like An Angel application." });
+
 });
 
 require("./app/routes/likeanangel.routes.js")(app);
