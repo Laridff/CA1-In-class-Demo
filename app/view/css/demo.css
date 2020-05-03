@@ -3,7 +3,7 @@
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: Thistle;
+   background-color: Plum;
    color: white;
    text-align: center;
     height:25px;
@@ -11,7 +11,7 @@
 
 .jumbotron{
 
-background-color: Thistle;
+background-color: Plum;
 color:white;
 }
 
@@ -32,6 +32,6 @@ color:white !important;
 
  .modal-header{
 color:white !important;
-background-color: purple;
+background-color: Plum;
 
 }
